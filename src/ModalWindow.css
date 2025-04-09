@@ -1,0 +1,104 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 1000;
+}
+.modal-backdrop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  width: 500px;
+  height: 285px;
+  transform: translateY(-50px);
+  transition: transform 0.5s ease;
+  z-index: 1001;
+}
+.modal-backdrop.show.modal-content {
+  transform: translateY(0);
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.modal-close-button::before,
+.modal-close-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: #333;
+}
+
+.modal-close-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal-close-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.social-button{
+    align-items: center;
+    display: flex;
+    height: 55px;
+    width: 220px;
+    border-radius: 55px;
+    background: black;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 2%;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social.telegram {
+  background: url(/public/telegram.png) no-repeat center;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.social.VK {
+  background: url(/public/vk.png) no-repeat center;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.social-button:hover{
+    background: #4824ff;
+    filter: drop-shadow(0px 0px 35px #4824ff40);
+    color: #eeebff;
+}
