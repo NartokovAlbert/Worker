@@ -51,7 +51,7 @@ const ModalWindow = ({ show, onClose, children }) => {
           <a
             href="http://t.me/AlbertNartokov"
             target="_blank"
-            className="social-button"
+            className="social-button" rel="noreferrer"
           >
             <div className="social telegram"></div>
             Telegram
@@ -59,7 +59,7 @@ const ModalWindow = ({ show, onClose, children }) => {
           <a
             href="https://vk.com/nart091"
             target="_blank"
-            className="social-button"
+            className="social-button" rel="noreferrer"
           >
             <div className="social VK"></div>
             VK
