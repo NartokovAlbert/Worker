@@ -83,10 +83,10 @@ header a:hover {
   margin-right: 2%;
 }
 .icon.telegram {
-  content: url(/public/telegram.png);
+  content: url(/public/imgLogo/telegram.png);
 }
 .icon.VK {
-  content: url(/public/vk.png);
+  content: url(/public/imgLogo/vk.png);
 }
 
 .icon:hover {
@@ -113,7 +113,7 @@ header a:hover {
 }
 
 .theme.light {
-  content: url(/public/free-icon-sun-3682916.png);
+  content: url(/public/imgLogo/free-icon-sun-3682916.png);
 }
 
 .switch:hover > .theme.light {
@@ -198,7 +198,7 @@ header a:hover {
 
 /*--- Service ---*/
 
-.service-block{
+.service-block {
   height: 500px;
   margin-left: -5vw;
   margin-right: 5vw;
@@ -207,23 +207,22 @@ header a:hover {
   align-content: center;
 }
 
-.service-block .tag{
+.service-block .tag {
   display: flex;
   font-size: 24px;
   font-weight: 500;
   background: #c7c2e2;
-  color:#4824ff;
+  color: #4824ff;
   margin: 0 12px 0 0;
   padding: 8px 22px 8px 8px;
   border-radius: 24px;
-
 }
 
-.service-block .tag .tag-icon{
+.service-block .tag .tag-icon {
   margin: -10px;
   padding: 0;
   position: relative;
-  content: url(/public/done.png);
+  content: url(/public/imgLogo/done.png);
   background: none;
   scale: 0.33;
   height: 50px;
@@ -252,7 +251,7 @@ header a:hover {
 
 .portfolio-title {
   font-size: 72px;
-  font-family: 'Prata';
+  font-family: "Prata";
   font-weight: 500;
   background: linear-gradient(
     to right,
@@ -269,4 +268,34 @@ header a:hover {
   background-size: 200%;
   animation: gradientAnimation 5s linear infinite;
   text-align: center;
+}
+
+/* .portfolio-block {
+  
+} */
+
+.tag {
+  display: flex;
+  font-size: 20px;
+  font-weight: 500;
+  background: #eeebff;
+  color: #4824ff;
+  margin: 0 12px 0 0;
+  padding: 8px 22px 8px 22px;
+  border-radius: 24px;
+  border: 1px solid #eeebff;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.tag:hover {
+  background: #4824ff;
+  color: white;
+  filter: drop-shadow(0px 0px 30px #4824ff25);
+}
+
+.tag.selected {
+  background: #04001a;
+  color: white;
+  border: 1px solid #4824ff;
 }

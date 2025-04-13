@@ -80,7 +80,7 @@
 }
 
 .social.telegram {
-  background: url(/public/telegram.png) no-repeat center;
+  background: url(/public/imgLogo/telegram.png) no-repeat center;
   width: 30px;
   height: 30px;
   background-size: contain;
@@ -89,7 +89,7 @@
   align-items: center;
 }
 .social.VK {
-  background: url(/public/vk.png) no-repeat center;
+  background: url(/public/imgLogo/vk.png) no-repeat center;
   width: 30px;
   height: 30px;
   background-size: contain;

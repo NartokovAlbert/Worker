@@ -3,9 +3,32 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, { useState } from "react";
 import ModalWindow from "./ModalWindow";
+import AllGallery from "./AllGallery";
+import Banners from "./Banners";
+import VkStories from "./VkStories";
+import YouTubeDesign from "./YouTubeDesign";
+import YouTubeThumbnails from "./YouTubeThumbnails";
 
 function Main() {
   const [showModal, setShowModal] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const renderComponent = () => {
+    switch (selectedCategory) {
+      case "All":
+        return <AllGallery />;
+      case "Banners":
+        return <Banners />;
+      case "YouTubeThumbnails":
+        return <YouTubeThumbnails />;
+      case "YouTubeDesign":
+        return <YouTubeDesign />;
+      case "VkStories":
+        return <VkStories />;
+      default:
+        return <AllGallery />;
+    }
+  };
 
   const handleOpenModal = () => {
     setShowModal(true);
@@ -75,7 +98,7 @@ function Main() {
           <img
             className="first-image-layer"
             alt="img"
-            src="/develop.png"
+            src="/imgLogo/develop.png"
             draggable="false"
           ></img>
         </div>
@@ -133,8 +156,66 @@ function Main() {
 
         <div className="portfolio-block">
           <div className="portfolio-content">
-            <img className="portfolio-arrow" alt="arrow" src="/arrow.png" draggable='false'/>
+            <img
+              className="portfolio-arrow"
+              alt="arrow"
+              src="/imgLogo/arrow.png"
+              draggable="false"
+            />
             <h1 className="portfolio-title">Портфолио</h1>
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "20px",
+            }}
+          >
+            <p
+              className={`tag ${selectedCategory === "All" ? "selected" : ""}`}
+              onClick={() => setSelectedCategory("All")}
+            >
+              Все работы
+            </p>
+            <p
+              className={`tag ${
+                selectedCategory === "Banners" ? "selected" : ""
+              }`}
+              onClick={() => setSelectedCategory("Banners")}
+            >
+              Банеры
+            </p>
+            <p
+              className={`tag ${
+                selectedCategory === "YouTubeDesign" ? "selected" : ""
+              }`}
+              onClick={() => setSelectedCategory("YouTubeDesign")}
+            >
+              Оформление Ютуб
+            </p>
+            <p
+              className={`tag ${
+                selectedCategory === "YouTubeThumbnails" ? "selected" : ""
+              }`}
+              onClick={() => setSelectedCategory("YouTubeThumbnails")}
+            >
+              Превью Ютуб
+            </p>
+            <p
+              className={`tag ${
+                selectedCategory === "VkStories" ? "selected" : ""
+              }`}
+              onClick={() => setSelectedCategory("VkStories")}
+            >
+              Сторис ВК
+            </p>
+          </div>
+          <div
+            className="content"
+            style={{ marginLeft: "-5vw", marginRight: "-5vw" }}
+          >
+            {renderComponent()}
           </div>
         </div>
       </div>
